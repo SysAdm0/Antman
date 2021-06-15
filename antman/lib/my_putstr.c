@@ -5,7 +5,7 @@
 ** example of bad code:
 */
 
-#include "../my.h"
+#include "my.h"
 
 int my_putstr(char const *str)
 {

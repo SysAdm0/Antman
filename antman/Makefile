@@ -6,27 +6,20 @@
 ##
 
 .PHONY: fclean all
-SRC		=		lib/my_putchar.c	\
-				lib/my_put_nbr.c	\
-				lib/my_putstr.c	\
-				lib/mylen.c	\
-				lib/my_reverse.c	\
-				lib/my_strcpy.c	\
-				singleton.c			\
-				open_read.c			\
-				sort_caracters.c	\
-				btree.c	\
-				heap.c	\
-				convert.c	\
-				antman.c
+
+SRC 	=	$(wildcard $(wildcard lib/*.c) src/*.c)
+
+CFLAGS	=	-I./include -g3
+
+NAME	=	antman
+
 all: COMPIL
 COMPIL:	$(SRC:.c=.o)
-	@ar rc libmy.a lib/*.o
-	@gcc -o antman *.o libmy.a -g3
+	@gcc -o $(NAME) $(SRC) $(CFLAGS)
 	@echo "-> Done"
 clean:
 	rm -f lib/*.o
-	rm -f *.o
-	rm -f libmy.a
+	rm -f src/*.o
 fclean: clean
+	rm -f $(NAME)
 re: fclean all

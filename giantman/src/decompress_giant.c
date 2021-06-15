@@ -4,7 +4,7 @@
 ** File description:
 ** decompress_giant
 */
-#include "include/my.h"
+#include "my.h"
 
 char *bintracker(char *file, int i)
 {

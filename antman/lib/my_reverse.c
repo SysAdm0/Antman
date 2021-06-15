@@ -5,7 +5,7 @@
 ** man man
 */
 
-#include "../my.h"
+#include "my.h"
 
 char *my_revstr(char *str)
 {

@@ -5,7 +5,7 @@
 ** M-x doctor
 */
 
-#include "../my.h"
+#include "my.h"
 
 void my_putchar(char c)
 {

@@ -5,7 +5,7 @@
 ** openread
 */
 
-#include "include/my.h"
+#include "my.h"
 
 int my_size(int nb)
 {

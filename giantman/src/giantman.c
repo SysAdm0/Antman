@@ -5,7 +5,7 @@
 ** main
 */
 
-#include "include/my.h"
+#include "my.h"
 
 int lenghtbin (char *file, int i)
 {

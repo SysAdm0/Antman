@@ -6,23 +6,20 @@
 ##
 
 .PHONY: fclean all
-SRC		=	giantman.c \
-			actionlist.c \
-			decompress_giant.c \
-			openread.c \
-			lib/my_putchar.c	\
-			lib/mylen.c
+
+SRC 	=	$(wildcard $(wildcard lib/*.c) src/*.c)
+
+CFLAGS	=	-I./include -g3
+
+NAME	=	giantman
 
 all: COMPIL
-
-OBJ = $(SRC:.c=.o)
-
-COMPIL:
-	@gcc -o giantman -I include/ $(SRC) -g3
+COMPIL:	$(SRC:.c=.o)
+	@gcc -o $(NAME) $(SRC) $(CFLAGS)
 	@echo "-> Done"
 clean:
 	rm -f lib/*.o
-	rm -f *.o
-	rm -f libmy.a
+	rm -f src/*.o
 fclean: clean
+	rm -f $(NAME)
 re: fclean all

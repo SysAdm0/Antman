@@ -4,7 +4,7 @@
 ** File description:
 ** putarginlist
 */
-#include "include/my.h"
+#include "my.h"
 
 dictionary_t *putinlistfront(dictionary_t *list, char *bin, char a)
 {

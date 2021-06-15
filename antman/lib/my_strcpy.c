@@ -5,7 +5,7 @@
 ** there's a problem: the intra is not down
 */
 
-#include "../my.h"
+#include "my.h"
 
 char *my_strcpy(char letter, char *binary)
 {
